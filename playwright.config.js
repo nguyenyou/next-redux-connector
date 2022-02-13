@@ -9,6 +9,9 @@ const config = {
     video: 'on-first-retry',
     screenshot: 'only-on-failure',
     trace: 'on-first-retry',
+    launchOptions: {
+      slowMo: 500,
+    },
   },
   projects: [
     {
