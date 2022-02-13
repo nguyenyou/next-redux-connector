@@ -1,19 +1,21 @@
 {
   "name": "turborepo-basic-shared",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "build": "pnpm build --filter next-redux-connector",
+    "dev": "pnpm build && turbo run dev --parallel",
+    "test": "playwright test"
   },
   "devDependencies": {
+    "@playwright/test": "^1.19.0",
+    "playwright": "^1.19.0",
     "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
     "turbo": "latest"
   },
   "engines": {
