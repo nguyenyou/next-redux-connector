@@ -16,7 +16,6 @@ export const counterSlice = createSlice({
   },
   extraReducers: {
     [HYDRATE]: (state, action) => {
-      console.log('HYDRATE', action.payload)
       return {
         ...state,
         ...action.payload.counter,
@@ -25,12 +24,34 @@ export const counterSlice = createSlice({
   },
 })
 
+export const greetingSlice = createSlice({
+  name: 'greeting',
+  initialState: {
+    message: 'Hello world',
+  },
+  reducers: {
+    setMessage: (state, action) => {
+      state.message = action.payload
+    },
+  },
+  extraReducers: {
+    [HYDRATE]: (state, action) => {
+      return {
+        ...state,
+        ...action.payload.greeting,
+      }
+    },
+  },
+})
+
 export const { increment, decrement } = counterSlice.actions
+export const { setMessage } = greetingSlice.actions
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       [counterSlice.name]: counterSlice.reducer,
+      [greetingSlice.name]: greetingSlice.reducer,
     },
   })
 }
