@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test')
 
 test.use({
-  baseURL: 'http://localhost:3001',
+  baseURL: 'http://localhost:3002',
   headless: true,
 })
 
