@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { increment, wrapper } from '~/store'
-import { sleep } from '~/utils'
+import { sleep } from '@nrc/shared'
 
 export default function One() {
   const value = useSelector((state) => state.counter.value)

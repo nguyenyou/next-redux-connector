@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "pnpm build --filter next-redux-connector",
+    "build": "pnpm build --filter next-redux-connector --filter shared",
     "dev": "pnpm build && turbo run dev --parallel",
     "test": "playwright test"
   },

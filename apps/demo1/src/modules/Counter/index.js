@@ -1,7 +1,7 @@
 import { Button } from '@chakra-ui/react'
 import { useDispatch, useSelector } from 'react-redux'
 import { increment } from '~/store'
-import { sleep } from '~/utils'
+import { sleep } from '@nrc/shared'
 
 export default function Counter() {
   const dispatch = useDispatch()

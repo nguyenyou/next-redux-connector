@@ -1,8 +1,7 @@
 import { Button } from '@chakra-ui/react'
 import { useDispatch, useSelector } from 'react-redux'
 import { increment } from '~/store'
-
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+import { sleep } from '@nrc/shared'
 
 export default function Home() {
   const dispatch = useDispatch()
