@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "nguyenyou",
+      "name": "You Nguyen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38455472?v=4",
+      "profile": "https://stackoverflow.com/users/story/7932059",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "next-redux-connector",
+  "projectOwner": "nguyenyou",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
