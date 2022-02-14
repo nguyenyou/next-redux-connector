@@ -3,7 +3,6 @@ const { devices } = require('@playwright/test')
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
   retries: 1,
-  workers: 5,
   use: {
     headless: true,
     video: 'on-first-retry',
