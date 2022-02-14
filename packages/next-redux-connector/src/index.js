@@ -32,7 +32,7 @@ export const createWrapper = (makeStore, config = {}) => {
   const makeProps = async ({ context, callback, addStoreToContext = false }) => {
     const store = initStore({ makeStore, context })
     if (config.debug) {
-      console.log(`1. getProps created store with state`, store.getState())
+      console.log(`[makeProps] 1. getProps created store with state`, store.getState())
     }
 
     // Legacy stuff - put store in context
@@ -48,7 +48,7 @@ export const createWrapper = (makeStore, config = {}) => {
     const initialProps = (nextCallback && (await nextCallback(context))) || {}
 
     if (config.debug) {
-      console.log(`3. getProps after dispatches has store state`, store.getState())
+      console.log(`[makeProps] 3. getProps after dispatches has store state`, store.getState())
     }
 
     const initialState = store.getState()
@@ -118,7 +118,7 @@ export const createWrapper = (makeStore, config = {}) => {
     const store = useMemo(() => initStore({ makeStore }), [])
 
     if (config.debug) {
-      console.log(`2. getProps created store with state`, store.getState())
+      console.log(`[useWrappedStore] 2. getProps created store with state`, store.getState())
     }
 
     useHybridHydrate(store, initialState)
