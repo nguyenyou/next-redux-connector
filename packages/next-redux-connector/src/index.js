@@ -28,9 +28,13 @@ const initStore = ({ makeStore, context = {} }) => {
   return sharedClientStore
 }
 
-export const createWrapper = (makeStore) => {
+export const createWrapper = (makeStore, config = {}) => {
   const makeProps = async ({ context, callback, addStoreToContext = false }) => {
     const store = initStore({ makeStore, context })
+
+    if (config.debug) {
+      console.log(`1. getProps created store with state`, store.getState())
+    }
 
     // Legacy stuff - put store in context
     if (addStoreToContext) {
@@ -43,7 +47,13 @@ export const createWrapper = (makeStore) => {
 
     const nextCallback = callback && callback(store)
     const initialProps = (nextCallback && (await nextCallback(context))) || {}
+
+    if (config.debug) {
+      console.log(`3. getProps after dispatches has store state`, store.getState())
+    }
+
     const initialState = store.getState()
+
     return { initialProps, initialState }
   }
 
