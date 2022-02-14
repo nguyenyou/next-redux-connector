@@ -1,4 +1,5 @@
 const { test, expect } = require('@playwright/test')
+const { SELECTORS } = require('@nrc/shared')
 
 test.use({
   baseURL: 'http://localhost:3001',
@@ -10,7 +11,7 @@ test('counter slice state is replace by server state', async ({ page }) => {
   await page.click('#btn')
   await page.click('#btn')
   await page.click('#btn')
-  await expect(page.locator('#count')).toContainText('3')
+  await expect(page.locator(SELECTORS.COUNTER_VALUE)).toContainText('3')
   await page.goto('/page-one')
-  await expect(page.locator('#count')).toContainText('1')
+  await expect(page.locator(SELECTORS.COUNTER_VALUE)).toContainText('1')
 })

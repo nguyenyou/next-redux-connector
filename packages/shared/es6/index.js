@@ -3,3 +3,6 @@ export var sleep = function(ms) {
         return setTimeout(resolve, ms);
     });
 };
+export var SELECTORS = {
+    COUNTER_VALUE: '#counter'
+};

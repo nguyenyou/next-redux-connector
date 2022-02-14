@@ -1,20 +1,15 @@
-import { useSelector } from 'react-redux'
+import Counter from '~/modules/Counter'
 import { increment, wrapper } from '~/store'
-import { sleep } from '@nrc/shared'
 
 export default function One() {
-  const value = useSelector((state) => state.counter.value)
-
   return (
     <div>
-      <div id='count'>{value}</div>
-      <div>One - getServerSideProps</div>
+      <Counter />
     </div>
   )
 }
 
 export const getServerSideProps = wrapper.getServerSideProps((store) => async (context) => {
-  await sleep(1000)
   await store.dispatch(increment())
 
   return {

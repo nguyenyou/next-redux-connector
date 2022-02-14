@@ -14,7 +14,8 @@
   "devDependencies": {
     "@playwright/test": "^1.19.0",
     "playwright": "^1.19.0",
-    "turbo": "latest"
+    "turbo": "latest",
+    "@nrc/shared": "workspace:*"
   },
   "engines": {
     "npm": ">=7.0.0",

@@ -18,7 +18,7 @@ export default function Counter() {
 
   return (
     <div>
-      <div id='count'>{value}</div>
+      <div id='counter'>{value}</div>
       <div className='flex gap-2'>
         <Button id='btn' onClick={increse}>
           increment
