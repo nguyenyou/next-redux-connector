@@ -56,4 +56,4 @@ export const makeStore = () => {
   })
 }
 
-export const wrapper = createWrapper(makeStore)
+export const wrapper = createWrapper(makeStore, { debug: true })

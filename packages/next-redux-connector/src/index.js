@@ -31,7 +31,6 @@ const initStore = ({ makeStore, context = {} }) => {
 export const createWrapper = (makeStore, config = {}) => {
   const makeProps = async ({ context, callback, addStoreToContext = false }) => {
     const store = initStore({ makeStore, context })
-
     if (config.debug) {
       console.log(`1. getProps created store with state`, store.getState())
     }
@@ -117,6 +116,10 @@ export const createWrapper = (makeStore, config = {}) => {
     const initialStateFromGSPorGSSP = props?.pageProps?.initialState
 
     const store = useMemo(() => initStore({ makeStore }), [])
+
+    if (config.debug) {
+      console.log(`2. getProps created store with state`, store.getState())
+    }
 
     useHybridHydrate(store, initialState)
     useHybridHydrate(store, initialStateFromGSPorGSSP)
