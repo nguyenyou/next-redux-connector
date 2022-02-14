@@ -6,12 +6,10 @@ importers:
     specifiers:
       '@playwright/test': ^1.19.0
       playwright: ^1.19.0
-      prettier: ^2.5.1
       turbo: latest
     devDependencies:
       '@playwright/test': 1.19.0
       playwright: 1.19.0
-      prettier: 2.5.1
       turbo: 1.1.2
 
   apps/demo1:
@@ -3211,12 +3209,6 @@ packages:
       nanoid: 3.2.0
       picocolors: 1.0.0
       source-map-js: 1.0.2
-    dev: true
-
-  /prettier/2.5.1:
-    resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
     dev: true
 
   /pretty-format/27.5.1:

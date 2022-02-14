@@ -1,8 +1,8 @@
 {
   "name": "next-redux-connector",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Next.js connector for Redux",
-  "main": "lib/lib.js",
+  "main": "lib/index.js",
   "module": "es6/index.js",
   "files": [
     "src",
