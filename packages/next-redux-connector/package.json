@@ -1,0 +1,29 @@
+{
+  "name": "next-redux-connector",
+  "version": "1.0.12",
+  "description": "Next.js connector for Redux",
+  "main": "lib/index.js",
+  "module": "es6/index.js",
+  "files": [
+    "src",
+    "lib",
+    "es6"
+  ],
+  "repository": "github:nguyenyou/next-redux-connector",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com"
+  },
+  "scripts": {
+    "build": "swc src -d lib -C module.type=commonjs && swc src -d es6 -C module.type=es6",
+    "prepublishOnly": "pnpm build"
+  },
+  "packageManager": "pnpm@6.30.0",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-redux": "^7.2.6"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.55",
+    "@swc/core": "^1.2.139"
+  }
+}

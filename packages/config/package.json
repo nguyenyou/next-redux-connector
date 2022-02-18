@@ -1,0 +1,9 @@
+{
+  "name": "@nrc/config",
+  "version": "1.0.11",
+  "description": "Shared config",
+  "private": true,
+  "main": "src/index.js",
+  "repository": "github:nguyenyou/next-redux-connector",
+  "packageManager": "pnpm@6.30.0"
+}
